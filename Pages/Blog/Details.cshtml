@@ -1,0 +1,43 @@
+﻿@page
+@model MiniPaintingWebsite.Pages.Blog.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProgressBlog</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgressBlog.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgressBlog.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgressBlog.DateOfEntry)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgressBlog.DateOfEntry)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgressBlog.TextBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgressBlog.TextBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgressBlog.ImageData)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgressBlog.ImageData)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProgressBlog.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

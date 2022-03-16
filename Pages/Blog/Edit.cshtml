@@ -1,0 +1,50 @@
+﻿@page
+@model MiniPaintingWebsite.Pages.Blog.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ProgressBlog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProgressBlog.Id" />
+            <div class="form-group">
+                <label asp-for="ProgressBlog.Title" class="control-label"></label>
+                <input asp-for="ProgressBlog.Title" class="form-control" />
+                <span asp-validation-for="ProgressBlog.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProgressBlog.DateOfEntry" class="control-label"></label>
+                <input asp-for="ProgressBlog.DateOfEntry" class="form-control" />
+                <span asp-validation-for="ProgressBlog.DateOfEntry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProgressBlog.TextBody" class="control-label"></label>
+                <input asp-for="ProgressBlog.TextBody" class="form-control" />
+                <span asp-validation-for="ProgressBlog.TextBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProgressBlog.ImageData" class="control-label"></label>
+                <input asp-for="ProgressBlog.ImageData" class="form-control" />
+                <span asp-validation-for="ProgressBlog.ImageData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
