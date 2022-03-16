@@ -15,6 +15,6 @@ namespace MiniPaintingWebsite.Data
         {
         }
 
-        public DbSet<MiniPaintingWebsite.Models.ProgressBlog> ProgressBlog { get; set; }
+        public DbSet<MiniPaintingWebsite.Models.ProgressBlog>? ProgressBlog { get; set; }
     }
 }
